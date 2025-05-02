@@ -2,12 +2,15 @@ import streamlit as st
 from openai import OpenAI
 import requests
 from bs4 import BeautifulSoup
+import os
+from dotenv import load_dotenv
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_icon="🤖", page_title="GPT Chatbot", layout="wide")
 
-# --- SETUP OPENAI API ---
-api_key = "YOUR_OPENAI_API_KEY"  # Replace with your actual key or use environment variable
+# --- SETUP API KEY ---
+load_dotenv()
+api_key = os.environ.get("api_key")
 client = OpenAI(api_key=api_key)
 
 # --- Optional: Web scraping example ---
