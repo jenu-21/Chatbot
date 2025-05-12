@@ -98,12 +98,11 @@ response = client.chat.completions.create(
 
 ### How to run it locally
 
-Using your local anacdonda prompt, in the terminal type: 
+Using your local Anaconda prompt, in the terminal type: 
 
 ```
 FILE_PATH
 streamlit run '{filename}.py'
-
 ```
 
 
