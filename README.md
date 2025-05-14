@@ -34,7 +34,11 @@ The goal of this chatbot is to provide a **generalised, customisable framework**
 The app connects to OpenAI using the `openai` Python SDK. You’ll need to provide your API key:
 ```python
 from openai import OpenAI
-client = OpenAI(api_key="YOUR_API_KEY")
+from dotenv import load_dotenv
+
+load_dotenv()
+api_key = os.environ.get("OPEN_API_KEY")
+client = OpenAI(api_key=api_key)
 ```
 
 ### 🌐 Web Scraping for External Knowledge
